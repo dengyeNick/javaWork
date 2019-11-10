@@ -29,6 +29,7 @@ public class IndexController {
     @GetMapping("/login")
     public String login(Model model, @RequestParam(value = "error", required = false) String error) {
         if (error != null) {
+            System.out.println("用户名或密码错误");
             model.addAttribute("error", "用户名或密码错误");
         }
         return "login_page";
