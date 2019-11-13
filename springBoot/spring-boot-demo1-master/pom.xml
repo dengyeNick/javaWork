@@ -151,31 +151,15 @@
 	<!--</build>-->
 
 
+
 	<build>
-		<!-- 打包后的名字 -->
-		<finalName>demo</finalName>
 		<plugins>
-			<!-- 配置启动类 -->
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.2.1</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-						<configuration>
-							<transformers>
-								<transformer
-										implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.example.demo1.Demo1Application</mainClass>
-								</transformer>
-							</transformers>
-						</configuration>
-					</execution>
-				</executions>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.example.demo1.Demo1Application</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
