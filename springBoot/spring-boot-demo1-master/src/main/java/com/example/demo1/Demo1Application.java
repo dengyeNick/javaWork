@@ -23,6 +23,7 @@ public class Demo1Application extends SpringBootServletInitializer {
 	public String home() {
 		Date now = new Date();
 		logger.info("url:{},time:{},", "/", now);
+		System.out.println("");
 		return "hello 朋友";
 	}
 
